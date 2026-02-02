@@ -1,8 +1,4 @@
 {
   "name": "PalmPulse - Intelligent Planet 2026",
-  "description": "An AI-powered acoustic detection platform for the Red Palm Weevil, built for the 2026 Google Cloud Intelligent Planet Hackathon by a UC Berkeley affiliated student team.",
-  "requestFramePermissions": [
-    "microphone",
-    "geolocation"
-  ]
+  "description": "An AI-powered acoustic detection platform for the Red Palm Weevil, built for the 2026 Google Cloud Intelligent Planet Hackathon by a UC Berkeley affiliated student team."
 }
