@@ -1,5 +1,6 @@
 
 import React from 'react';
+import palmPulseTrans from '../assets/palmPulseTrans.png';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -11,7 +12,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center space-x-3 mb-8 group">
               <div className="w-12 h-12">
                 <img 
-                  src="logo-circle.png" 
+                  src={palmPulseTrans} 
                   alt="PalmPulse Logo" 
                   className="w-full h-full object-contain"
                 />

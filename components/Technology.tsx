@@ -1,5 +1,9 @@
 
 import React from 'react';
+import screen1 from '../assets/1.png';
+import screen2 from '../assets/2.png';
+import screen3 from '../assets/3.png';
+import screen4 from '../assets/4.png';
 
 const Technology: React.FC = () => {
   return (
@@ -7,7 +11,8 @@ const Technology: React.FC = () => {
       <div className="text-center mb-24">
         <h1 className="text-4xl lg:text-7xl font-black text-palm-brown mb-6 tracking-tighter">Stack Intelligence</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-          Integrated systems from custom-built sensors to serverless AI orchestration.
+          Integrated systems from custom-built sensors to a Google Cloud backend (Firebase, Firestore, Authentication, Cloud Storage,
+          Cloud Functions, and a Vertex AI DenseNet endpoint).
         </p>
       </div>
 
@@ -37,6 +42,15 @@ const Technology: React.FC = () => {
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
             Traditional methods of detecting the Red Palm Weevil are reactive and often come too late. Our custom-built, high-sensitivity microphone captures the specific ultrasonic signatures of weevil larvae crunching through the heart of the palm.
           </p>
+          <div className="mb-8">
+            <div className="inline-block px-3 py-1 bg-[#F5F1E9] text-[10px] font-black uppercase tracking-widest rounded-full text-gray-500 mb-3">
+              Cloud Backbone
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              Scans authenticate via Firebase, stream to Firestore, store audio in Cloud Storage, trigger Cloud Functions, and call a Vertex AI
+              DenseNet endpoint before Gemini generates containment guidance.
+            </p>
+          </div>
           <div className="grid grid-cols-2 gap-4">
              {[
                { label: "Sampling Rate", value: "44.1kHz" },
@@ -86,23 +100,12 @@ const Technology: React.FC = () => {
             </div>
           </div>
           
-          <div className="mt-16 lg:mt-0 flex justify-center space-x-4">
-             {/* Secondary Mockups */}
-             <div className="w-64 h-[500px] bg-white rounded-[2rem] border-4 border-gray-800 shadow-2xl overflow-hidden hidden sm:block">
-                <div className="h-full bg-palm-green/10 p-6">
-                   <div className="h-full border-2 border-dashed border-palm-green/30 rounded-xl flex items-center justify-center text-palm-green font-bold text-xs uppercase tracking-widest text-center">Map Visualization<br/>Preview</div>
-                </div>
-             </div>
-             <div className="w-64 h-[500px] bg-white rounded-[2rem] border-4 border-gray-800 shadow-2xl overflow-hidden transform translate-y-10">
-                <div className="h-full bg-white p-6 flex flex-col">
-                   <div className="h-32 bg-gray-100 rounded-xl mb-4 animate-pulse"></div>
-                   <div className="space-y-3">
-                      <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-                      <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-                      <div className="h-10 bg-palm-brown rounded-lg w-full mt-8"></div>
-                   </div>
-                </div>
-             </div>
+          <div className="mt-16 lg:mt-0 grid grid-cols-2 gap-6">
+            {[screen1, screen2, screen3, screen4].map((img, i) => (
+              <div key={i} className="bg-white rounded-[2rem] border-4 border-gray-800 shadow-2xl overflow-hidden">
+                <img src={img} alt={`PalmPulse app screenshot ${i + 1}`} className="w-full h-full object-cover" />
+              </div>
+            ))}
           </div>
         </div>
         {/* Background Decorative SVG */}

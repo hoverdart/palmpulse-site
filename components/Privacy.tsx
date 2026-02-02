@@ -43,6 +43,7 @@ const Privacy: React.FC = () => {
           </p>
           <ul className="list-disc pl-6 mt-4 space-y-3 text-gray-600">
             <li>Generate precise infestation maps for farm owners and government entities.</li>
+            <li>Track where scans occur to predict likely new infestations before they spread.</li>
             <li>Feed predictive algorithms that forecast the spread of weevils based on spatial proximity.</li>
             <li>Coordinate localized containment steps through Gemini AI, tailored to your specific regional environment.</li>
           </ul>

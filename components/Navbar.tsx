@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import palmPulseTrans from '../assets/palmPulseTrans.png';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
@@ -23,12 +24,9 @@ const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-12 h-12 relative group-hover:scale-110 transition-transform duration-300">
               <img 
-                src="logo-circle.png" 
+                src={palmPulseTrans} 
                 alt="PalmPulse Logo" 
                 className="w-full h-full object-contain"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/favicon.ico'; // ultra-fallback
-                }}
               />
             </div>
             <span className="text-2xl font-black tracking-tighter text-[#2D2424] group-hover:text-palm-green transition-colors">PalmPulse</span>

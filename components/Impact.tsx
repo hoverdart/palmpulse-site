@@ -10,7 +10,8 @@ const Impact: React.FC = () => {
             Global Vision. <br /><span className="text-palm-green font-black">Saudi Reality.</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-            PalmPulse is the synthesis of UC Berkeley innovation, Google Cloud power, and regional expertise from KFUPM.
+            PalmPulse is the synthesis of UC Berkeley innovation, Google Cloud power, and regional expertise from KFUPM—built to be the
+            standout Intelligent Planet hackathon entry for Saudi Vision 2030.
           </p>
         </div>
 

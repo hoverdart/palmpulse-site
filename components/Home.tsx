@@ -1,5 +1,8 @@
 
 import React from 'react';
+import palmPulseTrans from '../assets/palmPulseTrans.png';
+import palmPulseSquare from '../assets/PalmPulseSquare.jpg';
+import promoVideo from '../assets/video.MP4';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -15,15 +18,15 @@ const Home: React.FC = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-palm-green opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-palm-green"></span>
                 </span>
-                <span className="tracking-wide">Berkeley Labs Hardware • Google Cloud • KFUPM</span>
+                <span className="tracking-wide">UC Berkeley • Intelligent Planet 2026 • Google Cloud</span>
               </div>
               <h1 className="text-6xl lg:text-8xl font-black text-[#2D2424] leading-[1.0] mb-8 tracking-tighter">
                 Saving the <br />
                 Kingdom's <span className="text-palm-brown">Gold</span>
               </h1>
               <p className="text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                Detecting the Red Palm Weevil with surgical precision. 
-                Our DenseNet model listens to acoustic signatures to protect the 30 million palm trees of Saudi Arabia.
+                A UC Berkeley–affiliated student team entry for the 2026 Google Cloud Intelligent Planet Hackathon.
+                PalmPulse detects Red Palm Weevil risk from 5–10s acoustic samples to protect Saudi Arabia’s 30 million palms.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center lg:justify-start">
                 <Link to="/technology" className="px-10 py-5 bg-[#2D2424] text-white rounded-full font-bold hover:bg-black shadow-xl transform hover:-translate-y-1 transition-all text-lg">
@@ -43,7 +46,7 @@ const Home: React.FC = () => {
                   {/* Mock App UI Header */}
                   <div className="pt-12 px-6 pb-6 bg-[#F5F1E9] border-b border-gray-100">
                     <div className="flex justify-between items-center mb-6">
-                      <img src="logo.png" alt="PalmPulse Logo" className="w-12 h-auto" />
+                      <img src={palmPulseTrans} alt="PalmPulse Logo" className="w-12 h-auto" />
                       <div className="flex space-x-1">
                         <div className="w-1.5 h-1.5 rounded-full bg-palm-green animate-pulse"></div>
                         <div className="w-1.5 h-1.5 rounded-full bg-palm-green/40"></div>
@@ -125,10 +128,10 @@ const Home: React.FC = () => {
             <video 
               className="w-full h-full object-cover" 
               controls 
-              poster="logo-circle.png"
+              poster={palmPulseSquare}
               playsInline
             >
-              <source src="promo-video.mp4" type="video/mp4" />
+              <source src={promoVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -159,7 +162,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
              <h2 className="text-4xl lg:text-5xl font-black text-[#2D2424] mb-4 tracking-tighter">Powered by Intelligent Planet</h2>
-             <p className="text-gray-500 max-w-2xl mx-auto font-medium">Built for scale using the Google Cloud ecosystem.</p>
+             <p className="text-gray-500 max-w-2xl mx-auto font-medium">Built for scale using the Google Cloud ecosystem and a modern Expo stack.</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-12">
@@ -167,7 +170,7 @@ const Home: React.FC = () => {
                {
                  title: "AI Acoustic Detection",
                  desc: "Using high-fidelity piezoelectric sensors to capture larvae crunching through tree hearts.",
-                 icon: <img src="logo.png" className="w-10 h-10 object-contain" alt="Acoustic" />
+                 icon: <img src={palmPulseTrans} className="w-10 h-10 object-contain" alt="Acoustic" />
                },
                {
                  title: "Predictive Analytics",
