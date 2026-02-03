@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 const Home: React.FC = () => {
 	return (
 		<>
-			<section className="relative min-h-screen snap-center pt-24 pb-20 lg:pb-32 overflow-hidden bg-[#F5F1E9]">
+			<section className="relative snap-center pt-24 pb-20 lg:pb-32 overflow-hidden bg-[#F5F1E9]">
 				<Navbar />
 				<div className="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="lg:grid lg:grid-cols-2 gap-20 items-center">
@@ -24,8 +24,8 @@ const Home: React.FC = () => {
 								</span>
 							</div>
 							<h1 className="text-6xl lg:text-8xl font-black text-[#2D2424] leading-[1.0] mb-8 tracking-tighter">
-								Saving the <br />
-								Kingdom's <span className="text-palm-brown">Gold</span>
+								Early Detection. <br />
+								<span className="text-palm-brown">Real Protection.</span>
 							</h1>
 							<p className="text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
 								A UC Berkeley–affiliated student team entry for the 2026 Google
@@ -40,23 +40,6 @@ const Home: React.FC = () => {
 								>
 									Explore Technology
 								</Link>
-								<a
-									href="#promo"
-									className="px-10 py-5 border-2 border-palm-brown text-palm-brown rounded-full font-bold hover:bg-palm-brown hover:text-white transform hover:-translate-y-1 transition-all text-lg flex items-center justify-center"
-								>
-									<svg
-										className="w-5 h-5 mr-2"
-										fill="currentColor"
-										viewBox="0 0 20 20"
-									>
-										<path
-											fillRule="evenodd"
-											d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-											clipRule="evenodd"
-										/>
-									</svg>
-									Watch Brief
-								</a>
 							</div>
 						</div>
 
@@ -152,7 +135,7 @@ const Home: React.FC = () => {
 						{[
 							{
 								title: "AI Acoustic Detection",
-								desc: "Using high-fidelity piezoelectric sensors to capture larvae crunching through tree hearts.",
+								desc: "Using high-fidelity acoustic sensors to capture larvae crunching through tree hearts.",
 								icon: (
 									<img
 										src={palmPulseTrans}

@@ -17,8 +17,9 @@ import Footer from "./components/Footer";
 const App: React.FC = () => {
 	return (
 		<Router>
-			<div className="min-h-screen flex flex-col">
-				<main className="flex-grow snap-y snap-mandatory overflow-x-hidden animate-in fade-in duration-1000">
+			<div className="flex flex-col">
+				<Navbar />
+				<main className="flex-grow pt-20 snap-y snap-mandatory overflow-x-hidden animate-in fade-in duration-1000">
 					<ScrollToTop />
 					<Routes>
 						<Route path="/" element={<Home />} />
@@ -29,6 +30,7 @@ const App: React.FC = () => {
 					</Routes>
 				</main>
 				<Footer />
+				
 			</div>
 		</Router>
 	);

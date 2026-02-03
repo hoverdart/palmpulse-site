@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white pt-24 pb-12 border-t border-[#F5F1E9]">
+    <footer className="bg-[#F5F1E9] p-8 border-t border-[#F5F1E9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-12">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-8 group">
               <div className="w-12 h-12">
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-3">
               {['Google Cloud', 'UC Berkeley', 'KFUPM'].map((badge) => (
-                <span key={badge} className="px-3 py-1.5 bg-[#F5F1E9] text-[9px] font-black text-gray-500 rounded-lg uppercase tracking-widest border border-gray-100">
+                <span key={badge} className="px-3 py-1.5 bg-white text-[9px] font-black text-gray-500 rounded-lg uppercase tracking-widest border border-gray-100">
                   {badge}
                 </span>
               ))}
@@ -37,7 +37,6 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="hover:text-palm-green transition-colors">Vision</Link></li>
               <li><Link to="/technology" className="hover:text-palm-green transition-colors">Technology</Link></li>
               <li><Link to="/impact" className="hover:text-palm-green transition-colors">Impact</Link></li>
-              <li><Link to="/credits" className="hover:text-palm-green transition-colors">Credits</Link></li>
             </ul>
           </div>
 
@@ -47,6 +46,8 @@ const Footer: React.FC = () => {
               <li><Link to="/privacy" className="hover:text-palm-green transition-colors">Privacy Policy</Link></li>
               <li><Link to="/privacy" className="hover:text-palm-green transition-colors">Terms of Service</Link></li>
               <li><a href="https://ai.google.dev" className="hover:text-palm-green transition-colors" target="_blank" rel="noreferrer">Google Gemini</a></li>
+              <li><Link to="/credits" className="hover:text-palm-green transition-colors">Credits</Link></li>
+
             </ul>
           </div>
         </div>
