@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 const Home: React.FC = () => {
 	return (
 		<>
-			<section className="relative min-h-screen pt-24 pb-20 lg:pb-32 overflow-hidden bg-[#F5F1E9]">
+			<section className="relative min-h-screen snap-center pt-24 pb-20 lg:pb-32 overflow-hidden bg-[#F5F1E9]">
 				<Navbar />
 				<div className="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="lg:grid lg:grid-cols-2 gap-20 items-center">
