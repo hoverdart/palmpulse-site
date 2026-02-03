@@ -1,0 +1,28 @@
+html,
+body,
+#root {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/* App wrapper */
+#root > div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Main scroll container */
+main {
+	height: 100%;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+}
+
+/* Ensure all sections participate in snapping */
+section {
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}
