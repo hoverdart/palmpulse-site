@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
 	HashRouter as Router,
 	Routes,
 	Route,
-	Link,
 	useLocation,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -17,9 +16,9 @@ import Footer from "./components/Footer";
 const App: React.FC = () => {
 	return (
 		<Router>
-			<div className="flex flex-col">
+			<div className="flex flex-col h-screen overflow-hidden">
 				<Navbar />
-				<main className="flex-grow pt-20 snap-y snap-mandatory overflow-x-hidden animate-in fade-in duration-1000">
+				<main className="flex-grow h-[calc(100vh-5rem)] overflow-y-auto snap-y snap-mandatory scroll-smooth">
 					<ScrollToTop />
 					<Routes>
 						<Route path="/" element={<Home />} />
@@ -28,19 +27,21 @@ const App: React.FC = () => {
 						<Route path="/privacy" element={<Privacy />} />
 						<Route path="/credits" element={<Credits />} />
 					</Routes>
+					<Footer />
 				</main>
-				<Footer />
 				
 			</div>
 		</Router>
 	);
 };
 
-// Helper component to scroll to top on route change
 const ScrollToTop = () => {
 	const { pathname } = useLocation();
 	useEffect(() => {
-		window.scrollTo(0, 0);
+		const main = document.querySelector("main");
+		if (main) {
+			main.scrollTo(0, 0);
+		}
 	}, [pathname]);
 	return null;
 };

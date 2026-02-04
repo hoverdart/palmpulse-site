@@ -1,5 +1,8 @@
 
 import React from 'react';
+import shauryaImg from '../assets/shaurya.png';
+import sushantImg from '../assets/sushant.png';
+import jacobImg from '../assets/jacob.png';
 
 const Credits: React.FC = () => {
   const developers = [
@@ -7,13 +10,15 @@ const Credits: React.FC = () => {
       name: 'Shaurya Verma',
       role: 'Lead AI & Full Stack Developer',
       link: 'https://shauryav.com',
-      desc: 'Expertise in Vertex AI implementation, DenseNet optimization, and cloud architecture.'
+      desc: 'Expertise in Vertex AI implementation, DenseNet optimization, and cloud architecture.',
+      image: shauryaImg
     },
     {
       name: 'Sushant Pangeni',
       role: 'Product Lead & Backend Engineer',
       link: 'https://daysling.com',
-      desc: 'Architect of the Google Cloud ecosystem and PalmPulse UI/UX systems.'
+      desc: 'Architect of the Google Cloud ecosystem and PalmPulse UI/UX systems.',
+      image: sushantImg
     }
   ];
 
@@ -21,12 +26,14 @@ const Credits: React.FC = () => {
     {
       name: 'Faisal Alharbi',
       role: 'Regional Visionary & Strategy',
-      desc: 'Specializing in Saudi Vision 2030 alignment and agricultural impact analysis.'
+      desc: 'Specializing in Saudi Vision 2030 alignment and agricultural impact analysis.',
+      image: null
     },
     {
       name: 'Jacob Shamoon',
       role: 'Hardware Engineering & IoT',
-      desc: 'Designer of the $15 Berkeley Labs custom microphone and acoustic collection systems.'
+      desc: 'Designer of the $15 Berkeley Labs custom microphone and acoustic collection systems.',
+      image: jacobImg
     }
   ];
 
@@ -47,23 +54,29 @@ const Credits: React.FC = () => {
       <div className="grid lg:grid-cols-2 gap-8 mb-12">
         {developers.map((dev, i) => (
           <div key={i} className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-[#EAE3D2] relative overflow-hidden group hover:border-palm-green transition-all duration-300">
-            <div className="relative z-10">
-              <h2 className="text-3xl font-bold mb-2 group-hover:text-palm-green transition-colors">{dev.name}</h2>
-              <p className="text-palm-brown font-bold mb-6 text-sm uppercase tracking-widest">{dev.role}</p>
-              <p className="text-gray-600 mb-8 leading-relaxed text-lg">{dev.desc}</p>
-              <a 
-                href={dev.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center text-sm font-bold border-b-2 border-palm-brown pb-1 hover:text-palm-green hover:border-palm-green transition-all"
-              >
-                Visit Portfolio
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+            <div className="relative z-10 flex gap-8">
+              <img 
+                src={dev.image} 
+                alt={dev.name} 
+                className="w-32 h-32 rounded-2xl object-cover shadow-lg flex-shrink-0"
+              />
+              <div>
+                <h2 className="text-3xl font-bold mb-2 group-hover:text-palm-green transition-colors">{dev.name}</h2>
+                <p className="text-palm-brown font-bold mb-6 text-sm uppercase tracking-widest">{dev.role}</p>
+                <p className="text-gray-600 mb-8 leading-relaxed text-lg">{dev.desc}</p>
+                <a 
+                  href={dev.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center text-sm font-bold border-b-2 border-palm-brown pb-1 hover:text-palm-green hover:border-palm-green transition-all"
+                >
+                  Visit Portfolio
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#F5F1E9] rounded-full group-hover:bg-palm-green/10 transition-colors duration-500"></div>
           </div>
         ))}
       </div>
@@ -71,10 +84,23 @@ const Credits: React.FC = () => {
       {/* Additional Team Members */}
       <div className="grid md:grid-cols-2 gap-6">
         {teamMembers.map((m, i) => (
-          <div key={i} className="bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 hover:shadow-lg transition-all">
-            <h3 className="text-xl font-bold mb-1">{m.name}</h3>
-            <p className="text-sm font-semibold text-palm-green mb-4">{m.role}</p>
-            <p className="text-gray-600 text-sm leading-relaxed">{m.desc}</p>
+          <div key={i} className="bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-gray-200 hover:shadow-lg transition-all flex gap-6">
+            {m.image ? (
+              <img 
+                src={m.image} 
+                alt={m.name} 
+                className="w-20 h-20 rounded-xl object-cover shadow-md flex-shrink-0"
+              />
+            ) : (
+              <div className="w-20 h-20 rounded-xl bg-palm-green/20 flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl font-bold text-palm-green">{m.name.split(' ').map(n => n[0]).join('')}</span>
+              </div>
+            )}
+            <div>
+              <h3 className="text-xl font-bold mb-1">{m.name}</h3>
+              <p className="text-sm font-semibold text-palm-green mb-4">{m.role}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{m.desc}</p>
+            </div>
           </div>
         ))}
       </div>

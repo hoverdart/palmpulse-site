@@ -4,13 +4,12 @@ import palmPulseSquare from "../assets/PalmPulseSquare.jpg";
 import promoVideo from "../assets/video.MP4";
 import displayeMockup from "../assets/displaye.png";
 import { Link } from "react-router-dom";
-import Navbar from "@/components/Navbar";
+
 
 const Home: React.FC = () => {
 	return (
 		<>
-			<section className="relative snap-center pt-24 pb-20 lg:pb-32 overflow-hidden bg-[#F5F1E9]">
-				<Navbar />
+			<section className="relative min-h-screen snap-start flex flex-col justify-center overflow-hidden bg-[#F5F1E9]">
 				<div className="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="lg:grid lg:grid-cols-2 gap-20 items-center">
 						<div className="text-center lg:text-left">
@@ -64,7 +63,7 @@ const Home: React.FC = () => {
 			{/* Video Promotional Section */}
 			<section
 				id="promo"
-				className="py-24 snap-center bg-[#2D2424] relative overflow-hidden"
+				className="min-h-full snap-start py-24 bg-[#2D2424] relative overflow-hidden"
 			>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="text-center mb-16">
@@ -119,7 +118,7 @@ const Home: React.FC = () => {
 			</section>
 
 			{/* Feature Grid with Logo Styling */}
-			<section className="py-32 snap-center bg-white">
+			<section className="min-h-full snap-start py-32 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-20">
 						<h2 className="text-4xl lg:text-5xl font-black text-[#2D2424] mb-4 tracking-tighter">

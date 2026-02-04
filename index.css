@@ -1,19 +1,20 @@
 html,
 body,
 #root {
-	min-height: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
-/* Ensure the app wrapper takes full height so internal scrolling works */
+/* Ensure the app wrapper takes full height */
 #root > div {
-	min-height: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
-/* Let the page scroll normally */
+/* Main scrollable area */
 main {
 	flex: 1;
 	scroll-behavior: smooth;
