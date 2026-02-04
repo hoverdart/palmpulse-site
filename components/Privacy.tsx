@@ -21,7 +21,7 @@ const Privacy: React.FC = () => {
             <h2 className="text-2xl font-bold text-[#2D2424]">Acoustic Sensing</h2>
           </div>
           <p className="text-gray-600 leading-relaxed">
-            PalmPulse requires access to your device's microphone and/or the connected Berkeley Labs custom $15 piezoelectric sensor. 
+            PalmPulse requires access to your device's microphone and/or the connected Berkeley Labs custom $15 acoustic microphone. 
             We capture a <strong>5 to 10-second audio sample</strong> of internal tree vibrations. 
             These samples are analyzed by our DenseNet model on Vertex AI solely to determine the probability of a Red Palm Weevil infestation. 
             We do not record, transmit, or store human conversations or non-agricultural ambient noise.

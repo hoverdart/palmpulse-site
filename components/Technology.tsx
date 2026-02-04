@@ -4,6 +4,7 @@ import screen1 from '../assets/1.png';
 import screen2 from '../assets/2.png';
 import screen3 from '../assets/3.png';
 import screen4 from '../assets/4.png';
+import mic from "../assets/mic.png";
 
 const Technology: React.FC = () => {
   return (
@@ -22,14 +23,14 @@ const Technology: React.FC = () => {
           <div className="absolute -inset-4 bg-palm-green/20 blur-3xl rounded-full"></div>
           <div className="relative bg-white p-8 rounded-[3rem] shadow-2xl border border-[#EAE3D2]">
             <img 
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" 
+              src={mic}
               alt="Hardware sensor prototype" 
-              className="rounded-[2rem] shadow-inner mb-8 h-[400px] w-full object-cover"
+              className="rounded-[2rem] shadow-inner mb-8 h-[400px] w-full object-fill"
             />
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-black text-2xl text-[#2D2424]">Berkeley Labs Custom</h3>
-                <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Piezoelectric Acoustic Array</p>
+                <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Acoustic Microphone</p>
               </div>
               <div className="bg-palm-brown text-white px-6 py-2 rounded-full font-black text-xl">$15</div>
             </div>

@@ -16,10 +16,9 @@ import Footer from "./components/Footer";
 const App: React.FC = () => {
 	return (
 		<Router>
-			<div className="flex flex-col h-screen overflow-hidden">
+			<div className="flex flex-col bg-white">
 				<Navbar />
-				<main className="flex-grow h-[calc(100vh-5rem)] overflow-y-auto snap-y snap-mandatory scroll-smooth">
-					<ScrollToTop />
+				<main className="flex-grow pt-20 overflow-x-hidden animate-in fade-in duration-1000">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/technology" element={<Technology />} />
